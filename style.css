@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    background: #0537fecc;
+    font-family: system-ui;
+}
+
+.button {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #2c9caf;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #2c9caf;
+    display: block;
+    margin: 40vh auto;
+}
+
+.button:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #70bdca;
+    box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #2c9caf;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.button:hover::before {
+    width: 250%;
+}
+
+form {
+    width: 50%;
+    background: rgb(255 255 255);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transition: all .6s;
+    -webkit-transition: all .6s;
+    -moz-transition: all .6s;
+    -ms-transition: all .6s;
+    -o-transition: all .6s;
+}
+
+@media (max-width: 1000px) {
+    form {
+        width: 70%;
+    }
+}
+
+.container {
+    padding: 16px;
+}
+
+.parent {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.headingOne {
+    font-size: 30px;
+    text-align: center;
+}
+
+@media (max-width:700px) {
+    .headingOne {
+        font-size: 23px;
+    }
+}
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 20px 0 8px;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 1px auto;
+}
+
+.registerbtn:not(:disabled):hover {
+    opacity: 1;
+}
+
+a {
+    color: dodgerblue;
+}
+
+.ps {
+    position: relative;
+}
+
+#close {
+    font-size: 26px;
+    opacity: 0.8;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+
+#close:hover {
+    font-size: 28px;
+    opacity: 1;
+    transform: rotate(140deg);
+    -webkit-transform: rotate(140deg);
+    -moz-transform: rotate(140deg);
+    -ms-transform: rotate(140deg);
+    -o-transform: rotate(140deg);
+}
+
+.papa {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.icon-check-circle {
+    position: absolute;
+    right: 19px;
+    top: 38px;
+    font-size: 24px;
+    color: #04AA6D;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+form p {
+    margin: 0;
+    font-size: 14px;
+    color: #f00;
+    display: none;
+}
+
+@media (max-width:453px) {
+    .headingOne {
+        font-size: 20px;
+        text-align: left;
+    }
+
+    #close {
+        font-size: 22px;
+    }
+
+    #btnSend {
+        font-size: 14px;
+        width: 50%;
+    }
+}
+/* Js classes */
+.error {
+    border: 2px solid #f00 !important;
+}
+
+.success {
+    border: 2px solid #04AA6D !important;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="icon.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <button id="mainBtn" class="button">Sign Up</button>
+    <div class="parent" id="parent">
+        <form id="form" action="">
+            <div class="container">
+                <div class="ps">
+                    <h1 class="headingOne">Create Account</h1>
+                    <div id="close">&#10006;</div>
+                </div>
+                <div class="papa">
+                    <label for="user"><b>User</b></label>
+                    <input type="text" placeholder="Enter User" name="user" id="user" required />
+                    <div class="icon-check-circle"></div>
+                    <p id="p-user">At least 3 letters</p>
+                </div>
+                <div class="papa">
+                    <label for="email"><b>Email</b></label>
+                    <input type="email" placeholder="Enter Email" name="email" id="email" required />
+                    <div class="icon-check-circle"></div>
+                    <p id="p-mail">Please enter a valid email</p>
+                </div>
+                <div class="papa">
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" id="password" required />
+                    <div class="icon-check-circle"></div>
+                    <p id="p-password">
+                        The password must be at least 8 characters long, including a
+                        capital letter and a number
+                    </p>
+                </div>
+                <div class="papa">
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required />
+                    <div class="icon-check-circle"></div>
+                    <p id="p-re-password">Please verify the password</p>
+                </div>
+                <button type="submit" class="registerbtn" id="btnSend" disabled>
+                    Sign up
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="/main.js"></script>
+</body>
+
+</html>
